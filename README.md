@@ -1,10 +1,6 @@
 # 质量预警升级助手（quality-alert-escalation）
 
-面向 **质量经理 / 现场主管** 的混合式双版技能：规范质量异常预警的分级、升级矩阵与响应时限，自动生成升级流程与实时看板，输出 **MD + HTML 双版报告**。
-
-## 主色
-
-`#C8102E`（L3/L4 严重与超时高亮统一使用）
+面向 **质量经理 / 现场主管** 的技能：规范质量异常预警的分级、升级矩阵与响应时限，自动生成升级流程与实时看板，输出 **纯文字版(.txt) + Markdown(.md)**。
 
 ## 适用角色
 
@@ -15,10 +11,10 @@
 
 ```bash
 # 使用内置小样本（首次跑通验证）
-python scripts/build_report.py -o output/escalation_sample
+python scripts/build_report.py --out-dir ./out
 
 # 使用自有数据
-python scripts/build_report.py -i events.json -o output/my_escalation
+python scripts/build_report.py --input events.json --out-dir ./out
 ```
 
 ## 输入字段（摘要）
